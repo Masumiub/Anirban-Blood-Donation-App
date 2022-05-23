@@ -1,0 +1,25 @@
+Users:
+-General Member 
+-Admin
+
+SignUp Form:
+Enter User ID, Enter Password, Enter Full Name, Choose Blood Group, User Type, Last Blood Donated Date, Contact Number
+Secondary Contact Number, Location
+
+General Member:
+- Make a Blood Request (Name, Blood Group, Amount, Date, Time, Hospital Name & Location, Contact Number, Reason)
+- Search for Donors
+- View Blood Bank list
+- View Others blood request
+- See the latest message sent by admin
+
+Admin:
+- View The Latest Blood Request(Name, Blood Group, Amount, Date, Time, Hospital Name & Location, Contact Number, Reason)
+- Solve case
+- Add Blood Donor(Donor Name, Donor ID, Blood Group, Contact No, Secondary Contact No, Last Donated, Location)- Save in a Binary File.
+- Add Blood Bank(Blood Bank Name, Contact Number, Location)- Save in a Binary File.
+- Add User(Enter User ID, Enter Password, Enter Full Name, Choose Blood Group, User Type, Last Blood Donated Date, Contact Number
+	   Secondary Contact Number, Location)- Save in a Binary File.
+- See the Most Demanding Blood Group Request(Pie Chart)
+- Send Message(Donor Number, location) to the Member.
+
