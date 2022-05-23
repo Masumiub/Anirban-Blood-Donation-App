@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anirban.blood.donation.application.GeneralMemberDashBoardSceneController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="System">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeSystemOnClick" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Blood Bank">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#viewbankListOnClickMenu" text="View Blood Bank List" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#viewFAQSOnClick" text="FAQs" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="495.0" prefWidth="755.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="811.0" layoutY="26.0" mnemonicParsing="false" onAction="#SignOutOnClickButton" text="SignOut" />
+            <Label layoutX="34.0" layoutY="25.0" text="General Member DashBoard">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="83.0" text="Make A Blood Request:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ReqBloodGroupComboBox" layoutX="125.0" layoutY="173.0" prefHeight="25.0" prefWidth="69.0" />
+            <Label layoutX="34.0" layoutY="176.0" text="Blood group:" />
+            <Label layoutX="34.0" layoutY="214.0" text="Amount (Bags):" />
+            <TextField fx:id="amountTextField" layoutX="124.0" layoutY="210.0" prefHeight="25.0" prefWidth="70.0" />
+            <DatePicker fx:id="deliveryDateTextField" layoutX="73.0" layoutY="247.0" prefHeight="25.0" prefWidth="121.0" />
+            <Label layoutX="34.0" layoutY="249.0" text="Date:" />
+            <Label layoutX="34.0" layoutY="289.0" text="Time:" />
+            <TextField fx:id="timeTextField" layoutX="73.0" layoutY="285.0" prefHeight="25.0" prefWidth="120.0" />
+            <Label layoutX="35.0" layoutY="317.0" text="Hospital Name &amp; Location:" />
+            <TextField fx:id="hospitalNameTextField" layoutX="36.0" layoutY="335.0" prefHeight="25.0" prefWidth="157.0" />
+            <Label layoutX="37.0" layoutY="422.0" text="Mention Reason:" />
+            <TextField fx:id="reasonTextField" layoutX="37.0" layoutY="440.0" prefHeight="25.0" prefWidth="157.0" />
+            <Button layoutX="36.0" layoutY="478.0" mnemonicParsing="false" onAction="#RequestBloodOnClickButton" prefHeight="25.0" prefWidth="157.0" text="Request Blood" />
+            <Label layoutX="230.0" layoutY="83.0" text="Search for Donors:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="SeaBloodGroupComboBox" layoutX="321.0" layoutY="117.0" prefHeight="25.0" prefWidth="69.0" />
+            <Label layoutX="230.0" layoutY="120.0" text="Blood group:" />
+            <TableView fx:id="donorTableView" layoutX="230.0" layoutY="157.0" prefHeight="200.0" prefWidth="641.0">
+              <columns>
+                <TableColumn fx:id="donorNameCol" prefWidth="114.0" text="Donor Name" />
+                  <TableColumn fx:id="bloodGroupCol" prefWidth="91.0" text="Blood Group" />
+                <TableColumn fx:id="ContactNoCol" prefWidth="91.0" text="Contact No." />
+                  <TableColumn fx:id="SecondContactNo" prefWidth="91.0" text="Secondary Contact No." />
+                  <TableColumn fx:id="lastDonatedCol" prefWidth="91.0" text="Last Donated" />
+                  <TableColumn fx:id="locationCol" prefWidth="91.0" text="Location" />
+                  <TableColumn fx:id="donorIDCol" prefWidth="57.0" text="Donor ID" />
+              </columns>
+            </TableView>
+            <Button layoutX="229.0" layoutY="374.0" mnemonicParsing="false" onAction="#viewBloodBankListOnClick" text="View Blood Bank List" />
+            <Button layoutX="374.0" layoutY="374.0" mnemonicParsing="false" onAction="#ViewOthersBloodRequestOnClick" text="View Others Blood Requests" />
+            <TextField fx:id="nameTextField" layoutX="35.0" layoutY="138.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="35.0" layoutY="119.0" text="Your Name:" />
+            <Label layoutX="37.0" layoutY="372.0" text="Contact Number:" />
+            <TextField fx:id="contactNoTextField" layoutX="37.0" layoutY="390.0" prefHeight="25.0" prefWidth="157.0" />
+            <Button layoutX="783.0" layoutY="117.0" mnemonicParsing="false" onAction="#searchDonorOnClick" text="Search Donor" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

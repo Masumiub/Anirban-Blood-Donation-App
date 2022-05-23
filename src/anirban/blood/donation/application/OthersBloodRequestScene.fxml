@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="917.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="anirban.blood.donation.application.OthersBloodRequestSceneController">
+   <children>
+      <TableView fx:id="bloodRequestTableView" layoutX="41.0" layoutY="100.0" prefHeight="261.0" prefWidth="835.0">
+         <columns>
+            <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="bloodGroupCol" prefWidth="81.0" text="Blood Group" />
+            <TableColumn fx:id="amountCol" prefWidth="61.0" text="Amount" />
+            <TableColumn fx:id="dateCol" prefWidth="93.0" text="Date" />
+            <TableColumn fx:id="timeCol" prefWidth="69.0" text="Time" />
+            <TableColumn fx:id="hospitalCol" prefWidth="163.0" text="Hospital Name &amp; Location" />
+            <TableColumn fx:id="contactNoCol" prefWidth="113.0" text="Contact Number" />
+            <TableColumn fx:id="reasonCol" prefWidth="85.0" text="Reason" />
+            <TableColumn fx:id="requestIDCol" prefWidth="85.0" text="RequestID" />
+         </columns>
+      </TableView>
+      <Label layoutX="361.0" layoutY="46.0" text="Blood Request List">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

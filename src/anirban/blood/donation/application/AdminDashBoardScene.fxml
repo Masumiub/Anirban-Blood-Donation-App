@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anirban.blood.donation.application.AdminDashBoardSceneController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="System">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeSystemOnClick" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Blood Bank">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addbloodbankonClickmenu" text="Add A Blood Bank" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showFAQsOnClick" text="FAQs" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="807.0" layoutY="32.0" mnemonicParsing="false" onAction="#SignOutOnClickButton" text="SignOut" />
+            <Label layoutX="32.0" layoutY="31.0" text="Admin DashBoard">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="85.0" text="Latest Blood Requests: " />
+            <TableView fx:id="bloodRequestTableView" layoutX="32.0" layoutY="116.0" prefHeight="200.0" prefWidth="835.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="bloodGroupCol" prefWidth="81.0" text="Blood Group" />
+                  <TableColumn fx:id="amountCol" prefWidth="61.0" text="Amount" />
+                  <TableColumn fx:id="dateCol" prefWidth="93.0" text="Date" />
+                  <TableColumn fx:id="timeCol" prefWidth="69.0" text="Time" />
+                  <TableColumn fx:id="hospitalCol" prefWidth="163.0" text="Hospital Name &amp; Location" />
+                  <TableColumn fx:id="contactNoCol" prefWidth="113.0" text="Contact Number" />
+                  <TableColumn fx:id="reasonCol" prefWidth="85.0" text="Reason" />
+                  <TableColumn fx:id="requestIDCol" prefWidth="85.0" text="RequestID" />
+              </columns>
+            </TableView>
+            <Button layoutX="32.0" layoutY="347.0" mnemonicParsing="false" onAction="#AddBloodDonorOnClick" prefHeight="25.0" prefWidth="170.0" text="Add A Blood Donor" />
+            <Button layoutX="32.0" layoutY="385.0" mnemonicParsing="false" onAction="#AddBloodBankOnClick" prefHeight="25.0" prefWidth="170.0" text="Add A Blood Bank" />
+            <Button layoutX="32.0" layoutY="422.0" mnemonicParsing="false" onAction="#AddAUserOnClick" prefHeight="25.0" prefWidth="170.0" text="Add A User" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
