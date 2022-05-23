@@ -124,6 +124,13 @@ public class GeneralMemberDashBoardSceneController implements Initializable {
     }
     @FXML
     private void RequestBloodOnClickButton(ActionEvent event) {
+        if(nameTextField.getText().equals("")|| amountTextField.getText().equals("") || deliveryDateTextField.getValue().toString().equals("") 
+            || timeTextField.getText().equals("") ||  hospitalNameTextField.getText().equals("")|| contactNoTextField.getText().equals("") || reasonTextField.getText().equals("")){
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Sorry! Please fillup the required form.");
+            a.showAndWait();
+        }
+        else{
         String returnedID;
         File f = null;
         FileOutputStream fos=null;
@@ -146,7 +153,7 @@ public class GeneralMemberDashBoardSceneController implements Initializable {
             
             oos.writeObject(newBloodRequest);
             
-            System.out.println(newBloodRequest.toString());
+            //System.out.println(newBloodRequest.toString());
             
             } catch (IOException ex) {
             Logger.getLogger(AddBloodDonorSceneController.class.getName()).log(Level.SEVERE, null, ex);
@@ -161,6 +168,7 @@ public class GeneralMemberDashBoardSceneController implements Initializable {
         a.setContentText("Success! Your Blood Request is sent. Please wait.");
         a.showAndWait();
         nameTextField.clear(); amountTextField.clear(); timeTextField.clear(); hospitalNameTextField.clear(); contactNoTextField.clear(); reasonTextField.clear();
+    }
     }
 
     @FXML
